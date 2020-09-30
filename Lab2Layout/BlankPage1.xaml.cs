@@ -33,7 +33,12 @@ namespace Lab2Layout
             // tonen dat we de param doorgeven van mainpage
             var param = e.Parameter.ToString();
             MessageDialog md = new MessageDialog($"{param}");
-            md.ShowAsync();
+          //  md.ShowAsync();
+        }
+
+        private void rectangle_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            StoryboardAnimation1.Begin();
         }
     }
 }

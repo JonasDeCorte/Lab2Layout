@@ -7,8 +7,46 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Storyboard x:Name="StoryboardAnimation1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="-87"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="195"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="ellipse" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:00" Value="3"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateY)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="42"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="84"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:05" Value="-351"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="rectangle" Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)">
+                <EasingDoubleKeyFrame KeyTime="00:00:01" Value="-18"/>
+                <EasingDoubleKeyFrame KeyTime="00:00:02" Value="-36"/>
+                <SplineDoubleKeyFrame KeyTime="00:00:05" Value="-429"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Page.Resources>
 
-    <StackPanel>
+    <Grid>
         <TextBlock Text="page2"/>
-    </StackPanel>
+        <Rectangle x:Name="rectangle" PointerEntered="rectangle_PointerEntered" HorizontalAlignment="Left" Height="100" Margin="540,510,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.544,0.72">
+            <Rectangle.RenderTransform>
+                <CompositeTransform/>
+            </Rectangle.RenderTransform>
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Ellipse x:Name="ellipse" HorizontalAlignment="Left" Height="100" Margin="540,186,0,0" Stroke="Black" VerticalAlignment="Top" Width="100" Fill="Red" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <CompositeTransform/>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+    </Grid>
 </Page>
