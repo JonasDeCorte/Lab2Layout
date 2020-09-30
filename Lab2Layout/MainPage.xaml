@@ -8,11 +8,22 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Canvas>
-        <Button x:Name="btn1" Content="Button" 
-                HorizontalAlignment="Left" 
-                Canvas.Left="718"
-                 Canvas.Top="190"
-                VerticalAlignment="Top"/>
-    </Canvas>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btn1" 
+                Content="Click me"
+                HorizontalAlignment="Center" 
+                Grid.Row="2"
+                Grid.Column="2"
+                VerticalAlignment="Center"/>
+    </Grid>
 </Page>
