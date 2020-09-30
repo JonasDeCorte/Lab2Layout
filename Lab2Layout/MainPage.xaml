@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="Lab2Layout.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Lab2Layout"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Canvas>
+        <Button x:Name="btn1" Content="Button" 
+                HorizontalAlignment="Left" 
+                Canvas.Left="718"
+                 Canvas.Top="190"
+                VerticalAlignment="Top"/>
+    </Canvas>
+</Page>
