@@ -7,12 +7,12 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+<!--Auto zal de ruimte in nemen van het grooste kind element-->
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -25,5 +25,16 @@
                 Grid.Row="2"
                 Grid.Column="2"
                 VerticalAlignment="Center"/>
+        <ListView Grid.Column="1" Grid.Row="2">
+            <ListViewItem>
+                <TextBlock Text="item 1"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="item 2"/>
+            </ListViewItem>
+            <ListViewItem>
+                <TextBlock Text="item 3"/>
+            </ListViewItem>
+        </ListView>
     </Grid>
 </Page>
